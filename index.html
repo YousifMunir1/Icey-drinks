@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Icey Drinks Menu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+    
+    body {
+      margin: 0;
+      background-color: #e0ffff; /* Light cyan background */
+      font-family: 'Poppins', sans-serif;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .menu-wrapper {
+      position: relative;
+      width: 360px;
+      background: #e0ffff;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      padding: 20px 30px 60px 30px;
+      box-sizing: border-box;
+      z-index: 1;
+    }
+
+    /* Top and Bottom stripes */
+    .top-stripe, .bottom-stripe {
+      position: absolute;
+      width: 200%;
+      height: 120px;
+      background: #ffcc99; /* Light orange */
+      border-radius: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+    .top-stripe {
+      top: -100px;
+    }
+    .bottom-stripe {
+      bottom: -100px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .title-main {
+      font-weight: 700;
+      font-size: 3rem;
+      color: #222;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin: 0;
+      line-height: 1;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .title-sub {
+      font-family: 'Great Vibes', cursive;
+      color: #ff8c00; /* a vivid orange */
+      font-size: 2.2rem;
+      text-transform: none;
+      margin-top: -6px;
+      font-weight: 400;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px 14px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .menu-item {
+      text-align: center;
+      color: #222;
+      cursor: default;
+    }
+
+    .menu-item img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #e0ffff;
+      box-shadow: 0 0 20px rgba(255 204 153 / 0.4);
+      transition: transform 0.3s ease;
+      background-color: white;
+    }
+    .menu-item img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255 140 0 / 0.7);
+    }
+
+    .menu-item-name {
+      font-weight: 700;
+      margin-top: 10px;
+      font-size: 1.05rem;
+      letter-spacing: 0.03em;
+    }
+
+    .menu-item-price {
+      font-weight: 500;
+      margin-top: 2px;
+      color: #ff8c00;
+      font-size: 1rem;
+    }
+
+    /* Leaf decorations (user will add image, so skipped) */
+  </style>
+</head>
+<body>
+  <div class="menu-wrapper">
+    <div class="top-stripe"></div>
+    <div class="bottom-stripe"></div>
+    <header>
+      <h1 class="title-main">ICEY DRINKS</h1>
+      <div class="title-sub">Refreshing Refreshments</div>
+    </header>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="placeholder.jpg" alt="Lemonade" />
+        <div class="menu-item-name">Lemonade</div>
+        <div class="menu-item-price">$5</div>
+      </div>
+      <div class="menu-item">
+        <img src="placeholder.jpg" alt="Iced Tea" />
+        <div class="menu-item-name">Iced Tea</div>
+        <div class="menu-item-price">$4</div>
+      </div>
+      <div class="menu-item">
+        <img src="placeholder.jpg" alt="Smoothie" />
+        <div class="menu-item-name">Smoothie</div>
+        <div class="menu-item-price">$6</div>
+      </div>
+      <div class="menu-item">
+        <img src="placeholder.jpg" alt="Frozen Mojito" />
+        <div class="menu-item-name">Frozen Mojito</div>
+        <div class="menu-item-price">$7</div>
+      </div>
+      <div class="menu-item">
+        <img src="placeholder.jpg" alt="Iced Coffee" />
+        <div class="menu-item-name">Iced Coffee</div>
+        <div class="menu-item-price">$5</div>
+      </div>
+      <div class="menu-item">
+        <img src="placeholder.jpg" alt="Fruit Punch" />
+        <div class="menu-item-name">Fruit Punch</div>
+        <div class="menu-item-price">$6</div>
+      </div>
+      <div class="menu-item">
+        <img src="placeholder.jpg" alt="Milkshake" />
+        <div class="menu-item-name">Milkshake</div>
+        <div class="menu-item-price">$5</div>
+      </div>
+      <div class="menu-item">
+        <img src="placeholder.jpg" alt="Iced Latte" />
+        <div class="menu-item-name">Iced Latte</div>
+        <div class="menu-item-price">$5</div>
+      </div>
+      <div class="menu-item">
+        <img src="placeholder.jpg" alt="Bubble Tea" />
+        <div class="menu-item-name">Bubble Tea</div>
+        <div class="menu-item-price">$7</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

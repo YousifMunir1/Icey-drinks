@@ -77,6 +77,12 @@
       margin-top: -6px;
       font-weight: 400;
     }
+    .title-sub2 {
+      
+      color: #222222;
+     
+    }
+
 
     .menu-grid {
       display: grid;
@@ -89,7 +95,7 @@
     .menu-item {
       text-align: center;
       color: #222;
-      cursor: default;
+      cursor: pointer; /* Change cursor to pointer */
     }
 
     .menu-item img {
@@ -121,8 +127,19 @@
       font-size: 1rem;
     }
 
-    /* Leaf decorations (user will add image, so skipped) */
+    .flavors {
+      display: none; /* Hidden by default */
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #555;
+    }
   </style>
+  <script>
+    function toggleFlavors(item) {
+      const flavors = item.querySelector('.flavors');
+      flavors.style.display = flavors.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
 </head>
 <body>
   <div class="menu-wrapper">
@@ -131,55 +148,140 @@
     <header>
       <h1 class="title-main">ICEY DRINKS</h1>
       <div class="title-sub">Refreshing Refreshments</div>
+      <div class="title-sub2">click on the items to check our flavors</div>
     </header>
+
+
+
+
+
     <div class="menu-grid">
-      <div class="menu-item">
-        <img src="placeholder.jpg" alt="Lemonade" />
+      <div class="menu-item" onclick="toggleFlavors(this)">
+        <img src="lemonde.png" alt="Lemonade" />
         <div class="menu-item-name">Lemonade</div>
-        <div class="menu-item-price">$5</div>
+        <div class="menu-item-price">2,000 IQD</div>
+        <div class="flavors">Flavors: Original, Strawberry, Mint</div>
       </div>
-      <div class="menu-item">
-        <img src="placeholder.jpg" alt="Iced Tea" />
+
+
+
+
+
+      <div class="menu-item" onclick="toggleFlavors(this)">
+        <img src="iced tee.png" alt="Iced Tea" />
         <div class="menu-item-name">Iced Tea</div>
-        <div class="menu-item-price">$4</div>
+        <div class="menu-item-price">2,000 IQD</div>
+        <div class="flavors">Flavors: Peach, Lemon, Raspberry</div>
       </div>
-      <div class="menu-item">
-        <img src="placeholder.jpg" alt="Smoothie" />
+
+
+
+
+
+      <div class="menu-item" onclick="toggleFlavors(this)">
+        <img src="smoothie.png" alt="Smoothie" />
         <div class="menu-item-name">Smoothie</div>
-        <div class="menu-item-price">$6</div>
+        <div class="menu-item-price">4,000 IQD</div>
+        <div class="flavors">Flavors: Mango, Banana, Berry</div>
       </div>
-      <div class="menu-item">
-        <img src="placeholder.jpg" alt="Frozen Mojito" />
+
+
+
+
+
+
+      <div class="menu-item" onclick="toggleFlavors(this)">
+        <img src="frozen mohito.png" alt="Frozen Mojito" />
         <div class="menu-item-name">Frozen Mojito</div>
-        <div class="menu-item-price">$7</div>
+        <div class="menu-item-price">5,000 IQD</div>
+        <div class="flavors">Flavors: Classic, Watermelon, Pineapple</div>
       </div>
-      <div class="menu-item">
-        <img src="placeholder.jpg" alt="Iced Coffee" />
+
+
+
+
+
+
+      <div class="menu-item" onclick="toggleFlavors(this)">
+        <img src="iced coffee.png" alt="Iced Coffee" />
         <div class="menu-item-name">Iced Coffee</div>
-        <div class="menu-item-price">$5</div>
+        <div class="menu-item-price">3,500 IQD</div>
+        <div class="flavors">Flavors: Vanilla, Hazelnut, Mocha</div>
       </div>
-      <div class="menu-item">
-        <img src="placeholder.jpg" alt="Fruit Punch" />
+
+
+
+
+
+    
+      <div class="menu-item" onclick="toggleFlavors(this)">
+        <img src="friut punch.png" alt="Fruit Punch" />
         <div class="menu-item-name">Fruit Punch</div>
-        <div class="menu-item-price">$6</div>
+        <div class="menu-item-price">5,000 IQD</div>
+        <div class="flavors">Flavors: Tropical, Berry, Citrus</div>
       </div>
-      <div class="menu-item">
-        <img src="placeholder.jpg" alt="Milkshake" />
+
+
+
+
+
+      <div class="menu-item" onclick="toggleFlavors(this)">
+        <img src="milkshake.png" alt="Milkshake" />
         <div class="menu-item-name">Milkshake</div>
-        <div class="menu-item-price">$5</div>
+        <div class="menu-item-price">4,500 IQD</div>
+        <div class="flavors">Flavors: Chocolate, Vanilla, Strawberry</div>
       </div>
-      <div class="menu-item">
-        <img src="placeholder.jpg" alt="Iced Latte" />
+
+
+
+
+
+      
+      <div class="menu-item" onclick="toggleFlavors(this)">
+        <img src="iced latte.png" alt="Iced Latte" />
         <div class="menu-item-name">Iced Latte</div>
-        <div class="menu-item-price">$5</div>
+        <div class="menu-item-price">5,000 IQD</div>
+        <div class="flavors">Flavors: Caramel, Vanilla, Hazelnut</div>
       </div>
-      <div class="menu-item">
-        <img src="placeholder.jpg" alt="Bubble Tea" />
+
+
+
+
+
+
+
+      <div class="menu-item" onclick="toggleFlavors(this)">
+        <img src="bubble tea.png" alt="Bubble Tea" />
         <div class="menu-item-name">Bubble Tea</div>
-        <div class="menu-item-price">$7</div>
+        <div class="menu-item-price">5,000 IQD</div>
+        <div class="flavors">Flavors: Taro, Matcha, Mango</div>
+      </div>
+
+
+
+
+
+
+
+      <div class="menu-item" onclick="toggleFlavors(this)">
+        <img src="matcha.png" alt="mstcha" />
+        <div class="menu-item-name">matcha</div>
+        <div class="menu-item-price">5,000 IQD</div>
+        <div class="flavors">Flavors: vanilla, chocolate, citrus fruits, </div>
+      </div>
+
+
+
+
+
+
+      <div class="menu-item" onclick="toggleFlavors(this)">
+        <img src="water.png" alt="Water" />
+        <div class="menu-item-name">Water</div>
+        <div class="menu-item-price">500 IQD</div>
+        <div class="flavors">Flavors: Plain, Lemon, Mint</div>
       </div>
     </div>
   </div>
 </body>
 </html>
-
